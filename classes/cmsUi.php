@@ -35,6 +35,18 @@ class cmsUi
         return $row;
     }
 
+    public function updateUser($userId){
+        $query = "UPDATE `users` SET `email` = 'newemail@gmail.com' WHERE `id` = $userId";
+        $result = $this->db->query($query);
+
+        $status = false;
+        if($result){
+            $status = true;
+        }
+
+        return $status;
+    }
+
     public function __destruct()
     {
         // TODO: Implement __destruct() method.

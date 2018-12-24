@@ -14,7 +14,7 @@
         <tr v-for="member in members">
             <td>{{member.f_name}}</td>
             <td>{{ member.email}}</td>
-            <td><a :href="'?action=edit&id=' + member.id">edit</a> | delete</td>
+            <td><a :href="'?page=edit&id=' + member.id">edit</a> | delete</td>
         </tr>
         </thead>
     </table>
